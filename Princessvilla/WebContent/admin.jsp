@@ -33,7 +33,8 @@
     <input type="password" required class="form-control" name="authToken" id="authToken" placeholder="Auth Token">
   </div>
     
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+  <button type="reset" class="btn btn-danger">Reset</button>
 </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
