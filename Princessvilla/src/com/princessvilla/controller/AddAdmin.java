@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.princessvilla.model.*;
+import com.princessvilla.service.AddAdminService;
 
 @WebServlet("/AddAdmin")
 public class AddAdmin extends HttpServlet {
@@ -16,13 +17,14 @@ public class AddAdmin extends HttpServlet {
        	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//Object Creation
-		
 		AdminUserInfo adminUserInfo = new AdminUserInfo();
 		adminUserInfo.setUserName(request.getParameter("userName"));
 		adminUserInfo.setEmailAddress(request.getParameter("emailAddress"));
 		adminUserInfo.setPassword(request.getParameter("password"));
 		adminUserInfo.setAuthToken(request.getParameter("authToken"));
+		
+		AddAdminService addAdminService =new AddAdminService();
+		addAdminService.addAdminInService(adminUserInfo);
 		
 	}
 

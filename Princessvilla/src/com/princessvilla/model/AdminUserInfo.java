@@ -6,6 +6,9 @@ public class AdminUserInfo {
 	private String emailAddress;
 	private String password;
 	private String authToken;
+	
+	
+	
 	public String getUserName() {
 		return userName;
 	}
