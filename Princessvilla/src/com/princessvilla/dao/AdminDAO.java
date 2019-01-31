@@ -13,7 +13,7 @@ public class AdminDAO {
 			Connection connection = DataBAseConnection.EstablishConnection();
 			
 			String query ="INSERT INTO admin_user (UserId,Email,Password) VALUES('"+adminUserInfo.getUserName()+"','"+adminUserInfo.getEmailAddress()+"','"+adminUserInfo.getPassword()+"');";
-			System.out.println(query);
+			
 		
 		
 		DataBAseConnection.executeStatementWithConnectionAndQuery(connection,query);

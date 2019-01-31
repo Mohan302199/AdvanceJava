@@ -8,17 +8,17 @@ public class DataBAseConnection {
 	
 	public static Connection EstablishConnection() {
 		
-		System.out.println("Starting EstablishCOnnection");
+//		System.out.println("Starting EstablishCOnnection");
 		Connection connection = null;
 	try {
 		
 		Class.forName(Constants.DB_Driver);
-		System.out.println("Pasiing database credentials");
+//		System.out.println("Pasiing database credentials");
 		connection = DriverManager.getConnection(Constants.DB_ConnectionURL,Constants.DB_UserId,Constants.DB_Password);
-		System.out.println("Exiting EstablishConnection");
+//		System.out.println("Exiting EstablishConnection");
 		
 	}catch(Exception e) {
-		System.out.println("Exception for Establishing Connection to Database");
+//		System.out.println("Exception for Establishing Connection to Database");
 		e.printStackTrace();
 	}
 	return connection;
