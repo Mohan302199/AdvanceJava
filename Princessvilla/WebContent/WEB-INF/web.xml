@@ -3,18 +3,29 @@
   <display-name>Princessvilla</display-name>
   <welcome-file-list>
     <welcome-file>admin.jsp</welcome-file>
+    <welcome-file>succcess.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <servlet-class>com.princessvilla.controller.AddAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <url-pattern>/addAdmin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginAdminServlet</servlet-name>
+    <servlet-class>com.princessvilla.controller.AdminLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginAdminServlet</servlet-name>
+    <url-pattern>/LoginAdmin</url-pattern>
+  </servlet-mapping>
   
   
- <servlet>
- <servlet-name>AddAdminServlet</servlet-name>
- <servlet-class>com.princessvilla.controller.AddAdmin</servlet-class>
- </servlet>
- 
- <servlet-mapping>
- <servlet-name>AddAdminServlet</servlet-name>
- <url-pattern>/addAdmin</url-pattern>
-
- </servlet-mapping>
- 
+  
+  
+  
+  
 </web-app>
