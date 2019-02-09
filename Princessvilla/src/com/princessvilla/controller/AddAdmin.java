@@ -29,10 +29,12 @@ public class AddAdmin extends HttpServlet {
 			response.sendRedirect("success.jsp");
 		} else if (wasStoredInDB == 0) {
 			request.setAttribute("wasStoredInDB", "Database Error");
-			request.getRequestDispatcher("admin.jsp").forward(request, response);
+			request.getRequestDispatcher("AdminRegistrartion.jsp").forward(request, response);
+//			response.sendRedirect("AdminRegistrartion.jsp");
 		} else if (wasStoredInDB == 2) {
 			request.setAttribute("wasStoredInDB", "Authentication Token Error");
-			request.getRequestDispatcher("admin.jsp").forward(request, response);
+			request.getRequestDispatcher("AdminRegistrartion.jsp").forward(request, response);
+//			response.sendRedirect("AdminRegistrartion.jsp");
 		}
 
 	}

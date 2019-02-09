@@ -3,7 +3,7 @@
   <display-name>Princessvilla</display-name>
   <welcome-file-list>
     <welcome-file>admin.jsp</welcome-file>
-    <welcome-file>succcess.jsp</welcome-file>
+    
   </welcome-file-list>
   <servlet>
     <servlet-name>AddAdminServlet</servlet-name>

@@ -42,16 +42,16 @@ public class DataBAseConnection {
 			AdminUserInfo adminUserInfo) {
 		ResultSet resultSet = null;
 		try {
-			System.out.println("getDataFromDatabaseWithConnection1");
+			
 			PreparedStatement preparedStatement = conection.prepareStatement(Query);
 
-			System.out.println("getDataFromDatabaseWithConnection2");
+			
 			preparedStatement.setString(1, adminUserInfo.getEmailAddress());
 
-			System.out.println("getDataFromDatabaseWithConnection3");
+			
 			resultSet = preparedStatement.executeQuery();
 
-			System.out.println("getDataFromDatabaseWithConnection4");
+			
 			
 
 		} catch (SQLException ex) {

@@ -22,7 +22,7 @@ public class AdminDAO {
 	}
 
 	public ArrayList<AdminUserInfo> loginToDataBase(AdminUserInfo adminUserInfo) {
-		System.out.println("loginToDataBase");
+		
 		Connection connection = DataBAseConnection.EstablishConnection();
 
 		String query = "SELECT Email,Password FROM admin_user WHERE Email =?";
@@ -33,13 +33,13 @@ public class AdminDAO {
 		try {
 			
 			while(result.next()) {
-				System.out.println("loginToDataBase");
+				
 				AdminUserInfo adminUserInfoFromDatabase = new AdminUserInfo();
-				System.out.println("loginToDataBase1");	
+				
 				adminUserInfoFromDatabase.setEmailAddress(result.getString("Email"));
-				System.out.println("loginToDataBase2");
+				
 				adminUserInfoFromDatabase.setPassword(result.getString("Password"));
-				System.out.println("loginToDataBase3");
+				
 				arryList.add(adminUserInfoFromDatabase);
 				
 			}

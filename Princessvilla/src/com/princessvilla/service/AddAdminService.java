@@ -17,13 +17,15 @@ public class AddAdminService {
 			AdminDAO adminDAO = new AdminDAO();
 			return (adminDAO.addAdminToDAtabase(adminUserInfo));
 		} else {
+			System.out.println("Authtoken Error");
 			return 2;
+			
 		}
 
 	}
 
 	public boolean loginAuthentication(AdminUserInfo adminUserInfo) {
-		System.out.println("loginAuthentication");
+		
 		AdminDAO adminDAO = new AdminDAO();
 		
 		ArrayList<AdminUserInfo> arraylist= new ArrayList<AdminUserInfo>();
@@ -31,13 +33,13 @@ public class AddAdminService {
 		boolean valid =false;
 		
 		for(AdminUserInfo adminUserInfo2:arraylist) {
-			System.out.println(adminUserInfo2.getEmailAddress());
+			
 			if(((adminUserInfo.getEmailAddress()).equals(adminUserInfo2.getEmailAddress()))  && ( ((adminUserInfo.getPassword()).equals(adminUserInfo2.getPassword()) ))){
 				
-				System.out.println("Passed");
+				
 				return true;
 			}else {
-				System.out.println("Failed");
+				return false;
 			}
 		}
 		return false;

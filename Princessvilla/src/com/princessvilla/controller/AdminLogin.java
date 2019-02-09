@@ -26,7 +26,13 @@ public class AdminLogin extends HttpServlet {
 		loginUserInfo.setPassword(request.getParameter("loginpassword"));
 
 		AddAdminService addAdminService = new AddAdminService();
-		addAdminService.loginAuthentication(loginUserInfo);
+		boolean loginSuccess = addAdminService.loginAuthentication(loginUserInfo);
+		if(loginSuccess== true ) {
+			response.sendRedirect("welcomeScreen.jsp");
+		} else if(loginSuccess==false){
+			request.setAttribute("loginError", "User id and password not found");
+			request.getRequestDispatcher("success.jsp").forward(request, response);
+		}
 
 	}
 
